@@ -6,21 +6,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Project Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Many of the improvements on Angular 6 were to the Angular CLI. The one I have really been looking forward to is the integration of the Angular CLI with ng-packagr to generate and build Angular libraries. In this project we will walk through the details of creating an Angular library.
 
-## Build
+## Project WorkSpace
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Angular workspace has two projects:
 
-## Running unit tests
+### A library project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This is the library of components and services that we want to provide. This is the code that we could publish to npm for example.
 
-## Running end-to-end tests
+### An application project
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+This will be a test harness for our library. Sometimes this application is used as documentation and example usage of the library.
+
+\*\*\* There will also be a third project for End to End testing that the Angular CLI generates for us by default which we will ignore.
+
+## Rules that will help you get your library started correctly so you won’t run into issues later.
+
+ALWAYS: Create your workspace using the name of your library-app. Then rename it to the name of your library.
+ALWAYS: Use a prefix when generating a library >>> ng generate library example-ng6-lib --prefix=enl
+Before using our newly generated library you need to build it >>> ng build --prod example-ng6-lib
+ALWAYS: Use the--prod flag when building your library.
+ALWAYS: In your test application import using your library by name and NOT the individual files >>> import { ExampleNg6LibModule } from 'example-ng6-lib';
 
 ## Further help
 
