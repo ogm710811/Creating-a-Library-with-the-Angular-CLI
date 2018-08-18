@@ -26,11 +26,11 @@ This will be a test harness for our library. Sometimes this application is used 
 
 ## Rules that will help you get your library started correctly so you won’t run into issues later.
 
-ALWAYS: Create your workspace using the name of your library-app. Then rename it to the name of your library.
-ALWAYS: Use a prefix when generating a library >>> ng generate library example-ng6-lib --prefix=enl
-Before using our newly generated library you need to build it >>> ng build --prod example-ng6-lib
-ALWAYS: Use the--prod flag when building your library.
-ALWAYS: In your test application import using your library by name and NOT the individual files >>> import { ExampleNg6LibModule } from 'example-ng6-lib';
+1. ALWAYS: Create your workspace using the name of your library-app. Then rename it to the name of your library.
+2. ALWAYS: Use a prefix when generating a library >>> ng generate library example-ng6-lib --prefix=enl
+3. Before using our newly generated library you need to build it >>> ng build --prod example-ng6-lib
+4. ALWAYS: Use the--prod flag when building your library.
+5. ALWAYS: In your test application import using your library by name and NOT the individual files >>> import { ExampleNg6LibModule } from 'example-ng6-lib';
 
 ## Further help
 
