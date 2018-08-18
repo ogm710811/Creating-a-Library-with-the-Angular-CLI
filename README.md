@@ -42,6 +42,26 @@ FOR COMPONENTS:
 Using export makes the element visible.
 Adding it to the entry file makes the class visible.
 
+# Building & Packaging The Library
+
+## Tips
+
+1. Never directly modify the library distribution package.json.
+2. ALWAYS: Use npm pack to create the tgz file.
+3. Check scripts on root package.json >>> To build & package our library we can now use: npm run package.
+
+## Using the Library in a Separate Application
+
+Create a test workspace so you can use the library in that application.
+To use the library in the new application >>> npm install ../example-ng6-lib/dist/example-ng6-lib/example-ng6-lib-0.0.1.tgz
+
+## Tips
+
+1. ALWAYS: Install the library’s .tgz package and NOT the directory.
+2. In order to actually use a component from the library we need to add the library’s module to our App Module. To do this we make two changes in: src\app\app.module.ts
+   2.1. Import the ExampleNg6LibModule >>> import { ExampleNg6LibModule } from 'example-ng6-lib';
+   2.2. Add the ExampleNg6LibModule to the imports array in our AppModule.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
