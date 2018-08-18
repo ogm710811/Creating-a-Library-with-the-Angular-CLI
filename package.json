@@ -1,6 +1,13 @@
 {
   "name": "example-ng6-lib-app",
   "version": "0.0.0",
+  "description": "Angular 6 Library example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogm710811/Creating-a-Library-with-the-Angular-CLI"
+  },
+  "author": "Orestes Garcia",
+  "license": "ISC",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

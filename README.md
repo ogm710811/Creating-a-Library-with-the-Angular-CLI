@@ -31,6 +31,16 @@ This will be a test harness for our library. Sometimes this application is used 
 3. Before using our newly generated library you need to build it >>> ng build --prod example-ng6-lib
 4. ALWAYS: Use the--prod flag when building your library.
 5. ALWAYS: In your test application import using your library by name and NOT the individual files >>> import { ExampleNg6LibModule } from 'example-ng6-lib';
+6. ALWAYS: Rebuild your library after making changes.
+
+## Generating Library Components
+
+When generating a component for our library we use the --project flag to tell the Angular CLI that we want the component generated in our library project.
+command >>> ng generate component foo --project=example-ng6-lib
+
+FOR COMPONENTS:
+Using export makes the element visible.
+Adding it to the entry file makes the class visible.
 
 ## Further help
 
